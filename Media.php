@@ -113,7 +113,7 @@ class Media {
 		$this->CI->image_lib->resize();
 		
 		//Delete original image?
-		if( (bool)$keep_image )
+		if( !(bool)$keep_image )
 			unlink(UPLOAD . $image_data['file_name']);
 
 		return TRUE;
